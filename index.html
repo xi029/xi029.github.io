@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xiao Taixian | 个人主页</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f9f9f9;
+      }
+      .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 280px;
+        padding: 2rem;
+        background-color: white;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+      }
+      .main-content {
+        margin-left: 280px;
+        padding: 2rem;
+        max-width: 800px;
+      }
+      .publication-item,
+      .award-item {
+        margin-bottom: 1.5rem;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 1rem;
+      }
+      .badge {
+        display: inline-block;
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        line-height: 1;
+        color: #fff;
+        background-color: #3b82f6;
+        border-radius: 9999px;
+        margin-right: 0.5rem;
+      }
+      .icon-group {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+      .icon-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .icon-item i {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+      @media (max-width: 768px) {
+        .sidebar {
+          position: relative;
+          width: 100%;
+          height: auto;
+          box-shadow: none;
+          border-bottom: 1px solid #eee;
+        }
+        .main-content {
+          margin-left: 0;
+          padding: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 左侧边栏：个人信息 + 联系方式 -->
+    <div class="sidebar">
+      <div class="text-center mb-6">
+        <img
+          src="https://avatars.githubusercontent.com/u/xi029"
+          alt="Xiao Taixian"
+          class="w-32 h-32 rounded-full mx-auto mb-3 animate__animated animate__fadeIn"
+        />
+        <h1 class="text-2xl font-bold animate__animated animate__fadeIn">
+          Xiao Taixian
+        </h1>
+        <p class="text-gray-600 animate__animated animate__fadeIn">
+          Computer Science & Technology
+        </p>
+      </div>
+      <div class="mb-6">
+        <p class="text-gray-700 flex items-center">
+          <i class="fa fa-graduation-cap mr-2 text-blue-500"></i>
+          天津科技大学（大四）
+        </p>
+        <p class="text-gray-700 flex items-center">
+          <i class="fa fa-university mr-2 text-blue-500"></i> 保研至厦门大学 mac
+          实验室
+        </p>
+        <p class="text-gray-700 flex items-center">
+          <i class="fa fa-heart mr-2 text-red-500"></i> 人工智能 · 计算机视觉 ·
+          多模态大模型
+        </p>
+      </div>
+      <div class="mb-6">
+        <h3 class="font-semibold mb-2">联系方式</h3>
+        <p class="text-gray-700 flex items-center">
+          <i class="fa fa-envelope mr-2 text-blue-500"></i> 3515410656@qq.com
+        </p>
+        <p class="text-gray-700 flex items-center">
+          <i class="fa fa-github mr-2 text-blue-500"></i>
+          <a
+            href="https://github.com/xi029"
+            target="_blank"
+            class="text-blue-600"
+            >xi029</a
+          >
+        </p>
+        <p class="text-gray-700 flex items-center">
+          <i class="fa fa-globe mr-2 text-blue-500"></i>
+          <a
+            href="https://blog.csdn.net/weixin_47520540"
+            target="_blank"
+            class="text-blue-600"
+            >CSDN 博客</a
+          >
+        </p>
+        <p class="text-gray-700 flex items-center">
+          <i class="fa fa-globe mr-2 text-blue-500"></i>
+          <a
+            href="https://www.cnblogs.com/taixian"
+            target="_blank"
+            class="text-blue-600"
+            >博客园</a
+          >
+        </p>
+      </div>
+      <div class="mt-auto">
+        <p class="text-sm text-gray-500">最后更新：2025年09月</p>
+      </div>
+    </div>
+
+    <!-- 主内容区：个人简介 + 动态 + 论文 + 奖项 + 科研经历 -->
+    <div class="main-content">
+      <!-- 关于我 -->
+      <section class="mb-8 animate__animated animate__fadeIn">
+        <h2 class="text-2xl font-bold mb-4 flex items-center">
+          <i class="fa fa-user-circle mr-2 text-blue-500"></i> About Me
+        </h2>
+        <p>
+          我是天津科技大学计算机科学与技术专业大四学生，已保研至厦门大学 mac
+          实验室。大二转专业到 CS 方向后，便加入
+          <a
+            href="https://ai.tust.edu.cn/kyxy/kytd/b393d34e127243459377992ad41c36e3.htm"
+            target="_blank"
+            class="text-blue-600"
+            >tustAiLab</a
+          >，从事视觉感知、蛋白质学习等科研项目。
+        </p>
+        <p>
+          未来研究方向聚焦于
+          <strong>深度学习、计算机视觉、多模态大模型、Agent</strong>
+          领域。我热爱计算机科学与 IT
+          互联网事业，课余会自主开展人工智能方向的技术研究。目前正忙于课业与科研，待这段时期结束后，会重拾技术实践，探索感兴趣的方向。
+        </p>
+      </section>
+
+      <!-- 新闻动态 -->
+      <section class="mb-8 animate__animated animate__fadeIn">
+        <h2 class="text-2xl font-bold mb-4 flex items-center">
+          <i class="fa fa-bullhorn mr-2 text-yellow-500"></i> News
+        </h2>
+        <ul class="list-disc pl-5">
+          <li>
+            2025年09月：筹备厦门大学研究生阶段科研工作
+            <span class="badge">NEW</span>
+          </li>
+          <li>2025年08月：获“第二十七届中国机器人及人工智能大赛”全国三等奖</li>
+          <li>
+            2025年05月：以共同一作在
+            <em>ICIC 2025（CCF-C）</em> 发表论文《PRNet:
+            基于3D卷积与Bi-LSTM的ChRs预测对比排序模型》
+          </li>
+          <li>
+            2025年03月：以共同一作在 <em>CCF-B 期刊</em> 发表论文《HMPNet:
+            船载视角海事目标检测的特征聚合架构》
+          </li>
+          <li>
+            2024年12月：获“华北五省及港澳台大学生计算机应用大赛”全国二等奖（负责人）
+          </li>
+        </ul>
+      </section>
+
+      <!-- 论文发表 -->
+      <section class="mb-8 animate__animated animate__fadeIn">
+        <h2 class="text-2xl font-bold mb-4 flex items-center">
+          <i class="fa fa-file-text mr-2 text-green-500"></i> Publications
+        </h2>
+        <div class="publication-item">
+          <h3 class="font-semibold">
+            HMPNet: A Feature Aggregation Architecture for Maritime Object
+            Detection from a Shipborne Perspective
+          </h3>
+          <p>
+            <span class="text-blue-600">CCF-B</span> | 共同一作 | 2025年03月 |
+            <em>已发表</em>
+          </p>
+          <p>
+            提出面向船载视角的海事目标检测特征聚合框架，解决运动模糊、复杂背景等挑战，提升检测精度。
+          </p>
+        </div>
+        <div class="publication-item">
+          <h3 class="font-semibold">
+            PRNet: A Contrastive Ranking Model Based on 3D Convolution and
+            Bi-LSTM for ChRs Prediction
+          </h3>
+          <p>
+            <span class="text-blue-600">CCF-C</span> | 共同一作 | 2025年05月 |
+            <em>已发表</em>
+          </p>
+          <p>
+            提出融合3D卷积与Bi-LSTM的对比排序模型，优化ChR变体蛋白预测，助力跨学科（生物信息学+深度学习）研究。
+          </p>
+        </div>
+        <div class="publication-item">
+          <h3 class="font-semibold">
+            Computer Vision for Dongba Script Variant Recognition via
+            Contrastive Learning
+          </h3>
+          <p>
+            <span class="text-blue-600">ICME 2025（CCF-B）</span> | 本科生一作 |
+            待发表
+          </p>
+          <p>
+            通过改进对比学习机制，提升东巴文异体字识别效果，为少数民族文字保护提供计算机视觉技术支持。
+          </p>
+        </div>
+      </section>
+
+      <!-- 获奖情况 -->
+      <section class="mb-8 animate__animated animate__fadeIn">
+        <h2 class="text-2xl font-bold mb-4 flex items-center">
+          <i class="fa fa-trophy mr-2 text-yellow-500"></i> Awards &
+          Competitions
+        </h2>
+        <div class="award-item">
+          <p class="font-semibold">国家奖学金</p>
+          <p>国家级 | 2024年10月</p>
+        </div>
+        <div class="award-item">
+          <p class="font-semibold">第十五届全国大学生数学竞赛（二等奖）</p>
+          <p>国家级 | 2023年12月</p>
+        </div>
+        <div class="award-item">
+          <p class="font-semibold">
+            2024年华北五省及港澳台大学生计算机应用大赛（二等奖）
+          </p>
+          <p>国家级 | 2024年12月 | <em>负责人</em></p>
+        </div>
+        <div class="award-item">
+          <p class="font-semibold">
+            第四届全国大学生算法设计与编程挑战赛决赛（二等奖）
+          </p>
+          <p>国家级 | 2023年10月 | <em>负责人</em></p>
+        </div>
+        <div class="award-item">
+          <p class="font-semibold">
+            第二十七届中国机器人及人工智能大赛全国决赛（三等奖）
+          </p>
+          <p>国家级 | 2025年08月 | <em>负责人</em></p>
+        </div>
+        <div class="award-item">
+          <p class="font-semibold">
+            第十二届全国大学生数字媒体科技作品及创意竞赛全国决赛（三等奖）
+          </p>
+          <p>国家级 | 2024年11月 | <em>负责人</em></p>
+        </div>
+        <div class="award-item">
+          <p class="font-semibold">
+            第六届全球校园人工智能算法精英大赛全国总决赛（三等奖）
+          </p>
+          <p>国家级 | 2024年12月 | <em>负责人</em></p>
+        </div>
+        <p class="mt-2 text-gray-600">
+          <em
+            >累计：以负责人身份在 A 类科创竞赛中获
+            <strong>国奖7项</strong>、<strong>省区奖8项</strong>。</em
+          >
+        </p>
+      </section>
+
+      <!-- 科研经历 -->
+      <section class="mb-8 animate__animated animate__fadeIn">
+        <h2 class="text-2xl font-bold mb-4 flex items-center">
+          <i class="fa fa-flask mr-2 text-purple-500"></i> Research Experience
+        </h2>
+        <div class="publication-item">
+          <h3 class="font-semibold">tustAiLab（天津科技大学）</h3>
+          <p>科研助理 | 2023年09月 – 至今</p>
+          <ul class="list-disc pl-5">
+            <li>参与视觉感知、蛋白质学习方向研究，成果发表多篇论文。</li>
+            <li>
+              参与教育部重点实验室开放课题，聚焦“对比学习机制优化东巴文异体字识别”。
+            </li>
+            <li>
+              跨学科参与“ChR变体蛋白预测”项目，衔接计算机科学与生物信息学。
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 技能与兴趣 -->
+      <section class="animate__animated animate__fadeIn">
+        <h2 class="text-2xl font-bold mb-4 flex items-center">
+          <i class="fa fa-code mr-2 text-blue-500"></i> Skills & Interests
+        </h2>
+        <div class="flex flex-wrap gap-3 mb-4">
+          <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+            >Python</span
+          >
+          <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+            >PyTorch</span
+          >
+          <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+            >TensorFlow</span
+          >
+          <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+            >计算机视觉</span
+          >
+          <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+            >深度学习</span
+          >
+          <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+            >多模态模型</span
+          >
+          <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+            >算法设计</span
+          >
+        </div>
+        <div class="icon-group">
+          <div class="icon-item">
+            <i class="fa fa-lightbulb-o text-yellow-500"></i>
+            <p>技术探索</p>
+          </div>
+          <div class="icon-item">
+            <i class="fa fa-code-fork text-green-500"></i>
+            <p>开源项目</p>
+          </div>
+          <div class="icon-item">
+            <i class="fa fa-book text-blue-500"></i>
+            <p>知识分享</p>
+          </div>
+        </div>
+        <p class="mt-2">
+          学术之外，我喜欢探索前沿AI技术、参与开源项目，并通过博客分享学习历程。坚信“终身学习”，对技术演进始终保持好奇心。
+        </p>
+      </section>
+    </div>
+
+    <script>
+      // 简单的动画触发
+      document.addEventListener("DOMContentLoaded", function () {
+        const animatedElements =
+          document.querySelectorAll(".animate__animated");
+        animatedElements.forEach((element) => {
+          element.style.opacity = "0";
+          element.style.transform = "translateY(20px)";
+          element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+
+          setTimeout(() => {
+            element.style.opacity = "1";
+            element.style.transform = "translateY(0)";
+          }, 100);
+        });
+      });
+    </script>
+  </body>
+</html>
